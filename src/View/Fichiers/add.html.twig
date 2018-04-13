@@ -1,0 +1,17 @@
+
+<div class="container">
+    <div class="jumbotron">
+        <form action="/Fichiers/add" method="post" enctype="multipart/form-data" role="form">
+                <label for="files" class="control-label">Fichiers à uploader</label>
+                <input type="file" class="form-control-file" id="files" name="files[]" multiple>
+                <input type="submit" value="Envoyer le fichier" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+
+
+{% for error in errors %}
+    <div class="row">
+        <div class="alert alert-danger">{{ error }}</div>
+    </div>
+{% endfor %}
